@@ -12,13 +12,15 @@ styles.css            One shared stylesheet (colours, spacing, layout)
 CNAME                 Custom domain for GitHub Pages (uastro.eu)
 news/
   eas2026/index.html      Full article: EAS 2026 special session SS43
-  lviv2026/index.html     Full article: DESY / DZA visit to Lviv, April 2026
+  lviv2026/index.html     Full article: Lviv visit, April 2026
+  lviv2025/index.html     Full article: Lviv letter of intent, October 2025
   leiden2025/index.html   Full article: Leiden meeting, June 2025
   _template/index.html    Copy this to create a new article (not published)
 assets/
   favicon.svg           Site icon
   eas2026.png           EAS 2026 session photo (also the OG preview image)
   lviv-2026-*.jpg       Lviv 2026 photos (credit Inna Potapova, JASU)
+  lviv-2025-*.jpg       Lviv 2025 photos (credit Valeriia Pinchuk, Mariia Seniak)
   leiden-2025.jpg       Leiden 2025 meeting photo (credit naor.studio)
   RecoveryPlanUkraine_EN.pdf   The Recovery Plan
 ```
