@@ -1,29 +1,53 @@
 # uastro.eu — Saving Astronomy in Ukraine
 
-A single-page static website for the "Saving Astronomy in Ukraine" initiative.
+The static website for the "Saving Astronomy in Ukraine" initiative.
 Plain HTML and one CSS file. No build tools, no framework. It loads instantly and
 is trivial to edit.
 
 ## Files
 
 ```
-index.html          The whole page (all copy lives here)
-styles.css          One stylesheet (colours, spacing, layout)
-CNAME               Custom domain for GitHub Pages (uastro.eu)
+index.html            Homepage: the Plan, news teasers, contact
+styles.css            One shared stylesheet (colours, spacing, layout)
+CNAME                 Custom domain for GitHub Pages (uastro.eu)
+news/
+  eas2026/index.html      Full article: EAS 2026 special session SS43
+  leiden2025/index.html   Full article: Leiden meeting, June 2025
+  _template/index.html    Copy this to create a new article (not published)
 assets/
-  favicon.svg       Site icon
-  ss43-poster.jpg   (add) OG image / session poster
-recovery-plan.pdf   (add) the Recovery Plan, linked from the site
+  favicon.svg           Site icon
+  eas2026.png           EAS 2026 session photo (also the OG preview image)
+  leiden-2025.jpg       Leiden 2025 meeting photo (credit naor.studio)
+  RecoveryPlanUkraine_EN.pdf   The Recovery Plan
 ```
+
+Each news article lives at its own permanent URL (`uastro.eu/news/<slug>/`),
+so it can be cited and linked directly. The homepage shows a teaser (date,
+headline, photo, first paragraph) linking to the full article.
 
 ## Editing the site
 
 Everything is hand-editable. Open the file, change the text, save.
 
-- **Change copy:** edit the text directly in `index.html`. Each section is marked
-  with a comment (`NEWS`, `THE RECOVERY PLAN`, `CONTACT`, etc.).
+- **Change copy:** edit the text directly in `index.html` (or the article's
+  `news/<slug>/index.html`). Each section is marked with a comment.
 - **Adjust colours / width:** edit the variables at the top of `styles.css`
-  (`--accent`, `--maxwidth`, and so on).
+  (`--accent`, `--maxwidth`, and so on). All pages share this one stylesheet.
+
+### Add a news item
+
+1. Copy `news/_template/` to `news/<slug>/` — the slug is short and lowercase,
+   e.g. `news/kyiv2027/`. The article's permanent URL becomes
+   `https://uastro.eu/news/<slug>/`.
+2. Open the new `index.html` and replace every ALL-CAPS placeholder (title,
+   date, text, photo, links, citation line). If there is a photo, put it in
+   `assets/` first.
+3. Add a teaser to the top of the News section in the homepage `index.html`:
+   copy an existing `<article class="news-item">` block and update the date,
+   headline link, photo, and first paragraph.
+
+The `_template` folder itself is not published: GitHub Pages skips folders
+that start with an underscore.
 
 ### Swap a photo
 
