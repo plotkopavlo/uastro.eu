@@ -1,0 +1,308 @@
+/* ============================================================
+   Saving Astronomy in Ukraine  (uastro.eu)
+   One small stylesheet. Minimalist, text-first, single column.
+   Edit the variables below to adjust colour, width, and spacing.
+   ============================================================ */
+
+:root {
+  --maxwidth: 680px;        /* content column width */
+  --accent: #0057b7;        /* restrained blue accent (Ukrainian flag blue) */
+  --accent-hover: #003f86;
+  --gold: #ffd400;          /* Ukrainian flag gold, used sparingly */
+  --tint: #f3f7fc;          /* very light blue, for the plan card */
+  --ink: #1a1a1a;           /* body text */
+  --muted: #5f6368;         /* dates, captions, credits */
+  --bg: #ffffff;
+  --line: #e6e6e6;          /* hairlines and borders */
+  --focus: #0057b7;         /* focus outline */
+}
+
+/* --- Reset-ish base --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  /* subtle side padding so text never touches the screen edge */
+  padding: 0 20px;
+}
+
+/* Thin flag bar across the very top: blue over gold. The one full-width
+   splash of colour; everything else stays black text on white. */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(to bottom, var(--accent) 0 50%, var(--gold) 50% 100%);
+  z-index: 20;
+}
+
+/* --- Layout wrapper: centres content, caps width --- */
+.wrap {
+  width: 100%;
+  max-width: var(--maxwidth);
+  margin-inline: auto;
+}
+
+/* --- Links --- */
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--accent-hover); }
+
+/* --- Visible focus states for keyboard users --- */
+a:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Skip link (hidden until focused) --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  z-index: 10;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.site-header {
+  padding: 56px 0 8px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.tagline {
+  margin: 10px 0 0;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+/* Thin anchor nav */
+.anchor-nav {
+  margin: 22px 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.anchor-nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+.anchor-nav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ============================================================
+   Sections and typography
+   ============================================================ */
+main { padding-top: 24px; }
+
+section {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+section:first-child { border-top: none; }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+/* Short accent rule under each section heading. */
+h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 10px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 4px 0 12px;
+}
+p { margin: 0 0 16px; }
+
+/* Dates and small meta lines */
+.meta {
+  margin: 0 0 2px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   News
+   ============================================================ */
+.news-item {
+  padding: 20px 0;
+}
+.news-item + .news-item {
+  border-top: 1px solid var(--line);
+}
+.links { color: var(--muted); }
+
+/* Photo and placeholder */
+.photo {
+  margin: 16px 0 20px;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  padding: 24px;
+  border: 1px dashed #c9c9c9;
+  border-radius: 4px;
+  background: #fafafa;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.photo-placeholder span {
+  margin-top: 6px;
+  font-size: 0.85rem;
+}
+figcaption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Recovery Plan shown as a soft tinted card, so the call to action
+   stands out gently without shouting. */
+#plan {
+  background: var(--tint);
+  border: 1px solid #e0eaf6;
+  border-top: 1px solid #e0eaf6;
+  border-radius: 8px;
+  padding: 28px 26px;
+  margin: 28px 0;
+}
+
+/* ============================================================
+   Buttons (Recovery Plan section)
+   ============================================================ */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 12px;
+}
+.button {
+  display: inline-block;
+  padding: 11px 20px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  border: 1px solid var(--accent);
+}
+.button:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+.button-secondary {
+  background: transparent;
+  color: var(--accent);
+}
+.button-secondary:hover {
+  background: transparent;
+  color: var(--accent-hover);
+}
+
+/* Small editorial note (remove once placeholders are wired up) */
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.note code {
+  background: #f2f2f2;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+  padding: 28px 0 56px;
+}
+.site-footer p { margin: 0 0 4px; }
+.credit {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Small screens
+   ============================================================ */
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .site-header { padding-top: 40px; }
+  h1 { font-size: 1.6rem; }
+  .tagline { font-size: 1.05rem; }
+}
+
+/* Respect users who prefer reduced motion (no motion here, but future-proof) */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto; }
+}
+
+/* Smooth scroll for anchor nav (only if motion is fine) */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}

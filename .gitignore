@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Local build brief (not part of the site)
+BUILD-BRIEF-uastro-eu.md
+
+# Local editor / preview config
+.claude/
