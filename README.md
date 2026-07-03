@@ -45,10 +45,17 @@ in the `THE RECOVERY PLAN` section of `index.html`.
 In `index.html`, find the "Share your feedback" button and update its `href`
 (currently the Google Form `https://forms.gle/As3SZyo9ueLFp4GY6`).
 
-### Add contact persons
+### Add or change a contact person
 
-In the `CONTACT` section of `index.html`, replace "Contact persons to be added"
-with names and emails.
+In the `CONTACT` section of `index.html`, edit the name, position, and email.
+
+Email addresses are kept out of the raw HTML so spam bots cannot harvest them.
+Each address is split into `data-user` and `data-domain` attributes on a
+`<span class="email">`, and a small script at the bottom of the page reassembles
+it into a clickable `mailto:` link in the browser. To change an address, edit
+those two attributes (and the readable `<noscript>` fallback next to them). To
+add another contact, copy the whole `<span class="email" ...>` and the script
+handles it automatically.
 
 ### Social preview image
 

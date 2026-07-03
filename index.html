@@ -124,7 +124,13 @@
       <p class="contact-person">
         <span class="contact-name">Pavlo Plotko</span><br>
         International Scientific Affairs, German Centre for Astrophysics (DZA)<br>
-        <a href="mailto:pavlo.plotko@dzastro.de">pavlo.plotko@dzastro.de</a>
+        <!-- The email is split into parts here and reassembled into a clickable
+             mailto link by the small script at the bottom of the page, so the
+             full address never appears in the raw HTML for spam bots to harvest.
+             The <noscript> fallback shows a readable form if JavaScript is off.
+             To change the address, edit data-user and data-domain (and the
+             fallback text) below. -->
+        <span class="email" data-user="pavlo.plotko" data-domain="dzastro.de"><noscript>pavlo.plotko [at] dzastro [dot] de</noscript></span>
       </p>
     </section>
 
@@ -136,5 +142,18 @@
       <p class="credit">A community initiative supporting the recovery of Ukrainian astronomy.</p>
     </div>
   </footer>
+
+  <!-- Reassemble email addresses on the client so they are not exposed as
+       plain text to address-harvesting bots. Progressive enhancement: if this
+       script does not run, the <noscript> fallback above is shown instead. -->
+  <script>
+    document.querySelectorAll(".email").forEach(function (el) {
+      var addr = el.dataset.user + "@" + el.dataset.domain;
+      var link = document.createElement("a");
+      link.href = "mailto:" + addr;
+      link.textContent = addr;
+      el.replaceChildren(link);
+    });
+  </script>
 </body>
 </html>
