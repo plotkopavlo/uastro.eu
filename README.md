@@ -17,6 +17,7 @@ news/
   leiden2025/index.html   Full article: Leiden meeting, June 2025
   _template/index.html    Copy this to create a new article (not published)
 assets/
+  analytics.js          Google Analytics (gtag.js) loader; measurement ID here
   favicon.svg           Site icon
   eas2026.png           EAS 2026 session photo (also the OG preview image)
   lviv-2026-*.jpg       Lviv 2026 photos (credit Inna Potapova, JASU)
@@ -89,6 +90,23 @@ handles it automatically.
 
 The Open Graph image points to `assets/eas2026.png`. To change what shows in link
 previews, update the `og:image` URL in the `<head>` of `index.html`.
+
+## Analytics
+
+Google Analytics (gtag.js) is loaded on every page via
+`<script src="/assets/analytics.js"></script>` in the `<head>`. The measurement
+ID (`G-GEC45WPW5L`) is set in one place, at the top of
+[`assets/analytics.js`](assets/analytics.js).
+
+- **Change property:** edit `GA_ID` in `assets/analytics.js`.
+- **Disable analytics:** remove the `<script src="/assets/analytics.js">` line
+  from each page's `<head>` (or empty that file).
+
+Note on privacy: the site is served from an EU domain, and Google Analytics
+sets cookies and sends data to Google. Depending on how the site is used, EU
+rules (GDPR / ePrivacy) may require a cookie-consent banner before analytics
+loads, and/or Google Consent Mode. This is a legal decision for the initiative;
+the current setup loads analytics for every visitor without a consent prompt.
 
 ## Deploying (GitHub Pages)
 
