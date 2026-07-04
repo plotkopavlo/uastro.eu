@@ -188,29 +188,8 @@ summary:focus-visible,
 }
 .nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
-/* Mobile menu via <details> (no JavaScript needed) */
-.menu summary {
-  display: none;
-  list-style: none;
-  cursor: pointer;
-  padding: 8px;
-  margin: -8px;
-  color: #fff;
-}
-.menu summary::-webkit-details-marker { display: none; }
-.menu .bars,
-.menu .bars::before,
-.menu .bars::after {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: currentColor;
-  position: relative;
-}
-.menu .bars::before,
-.menu .bars::after { content: ""; position: absolute; left: 0; }
-.menu .bars::before { top: -7px; }
-.menu .bars::after { top: 7px; }
+/* The nav is a plain wrapping row of links on all screen sizes: four short
+   links fit on a phone, so no hamburger menu (and no JavaScript) is needed. */
 
 /* ============================================================
    Buttons
@@ -463,6 +442,11 @@ summary:focus-visible,
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+/* Full-width variant used for the homepage institutions preview. */
+.inst-grid.wide {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-bottom: 26px;
+}
 .inst-card {
   background: #fff;
   border: 1px solid var(--line);
@@ -584,30 +568,16 @@ figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
 }
 
 @media (max-width: 720px) {
-  /* Collapse the top nav into a <details> menu */
-  .menu { position: relative; }
-  .menu summary { display: block; }
-  .menu .nav {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 12px);
+  /* Tighter top bar: brand above the nav links, smaller gaps */
+  .topbar-inner {
     flex-direction: column;
-    gap: 4px;
-    background: #0d1526;
-    border: 1px solid var(--dark-line);
-    border-radius: 10px;
-    padding: 10px 14px;
-    min-width: 190px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    align-items: flex-start;
+    gap: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .menu:not([open]) .nav { display: none; }
-  .menu .nav a { border-bottom: none; padding: 8px 2px; }
-}
-
-@media (min-width: 721px) {
-  /* Desktop: always show the nav inline, hide the hamburger */
-  .menu .nav { display: flex !important; }
-  .menu summary { display: none; }
+  .nav { gap: 14px; }
+  .nav a { font-size: 0.9rem; padding: 2px 0 4px; }
 }
 
 @media (max-width: 620px) {
