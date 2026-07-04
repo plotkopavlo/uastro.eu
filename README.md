@@ -11,6 +11,9 @@ index.html            Homepage: full-width sections (hero, four directions,
                       plan, news, institutions, partners, contact)
 styles.css            One shared stylesheet (design system + layout)
 CNAME                 Custom domain for GitHub Pages (uastro.eu)
+institutions/
+  index.html          Overview of the main astronomical institutions of
+                      Ukraine, with profiles and links to the Leiden slides
 news/
   eas2026/index.html      Full article: EAS 2026 special session SS43
   lviv2026/index.html     Full article: Lviv visit, April 2026
@@ -27,6 +30,8 @@ assets/
   lviv-2025-*.jpg       Lviv 2025 photos (credit Valeriia Pinchuk, Mariia Seniak)
   leiden-2025.jpg       Leiden 2025 meeting photo (credit naor.studio)
   RecoveryPlanUkraine_EN.pdf   The Recovery Plan
+  slides-leiden-2025/   Presentation slides from the Leiden meeting (PDFs),
+                        linked from the institutions page
 
 The hero background is derived from a large source image (`background.png`,
 git-ignored); the served copies are `hero-space.jpg` (2560px) and

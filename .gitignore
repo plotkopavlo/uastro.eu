@@ -8,5 +8,9 @@ CORRECTION-BRIEF-uastro-eu.md
 # Large source image; the served versions are assets/hero-space*.jpg
 assets/background.png
 
+# Raw saved pages and source material; the published slides live in
+# assets/slides-leiden-2025/
+assets/presentaions_Leiden/
+
 # Local editor / preview config
 .claude/
