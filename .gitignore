@@ -1,8 +1,12 @@
 # macOS
 .DS_Store
 
-# Local build brief (not part of the site)
+# Local briefs (not part of the site)
 BUILD-BRIEF-uastro-eu.md
+CORRECTION-BRIEF-uastro-eu.md
+
+# Large source image; the served versions are assets/hero-space*.jpg
+assets/background.png
 
 # Local editor / preview config
 .claude/

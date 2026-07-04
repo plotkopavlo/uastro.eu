@@ -29,15 +29,19 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Compact header for article pages: site name links back home. -->
-  <header class="site-header compact">
-    <div class="wrap">
-      <p class="eyebrow"><a class="home-link" href="/">Saving Astronomy in Ukraine</a></p>
-      <nav class="anchor-nav" aria-label="Sections">
-        <a href="/#plan">The Plan</a>
-        <a href="/#news">News</a>
-        <a href="/#contact">Contact</a>
-      </nav>
+  <!-- Top navigation (sticky, full width), shared with the homepage. -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/">Saving Astronomy in Ukraine</a>
+      <details class="menu">
+        <summary aria-label="Open menu"><span class="bars"></span></summary>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#plan">The Plan</a>
+          <a href="/#news">News</a>
+          <!-- Future: Institutions and Partners links, once those sections go live. -->
+          <a href="/#contact">Contact</a>
+        </nav>
+      </details>
     </div>
   </header>
 

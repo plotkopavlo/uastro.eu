@@ -25,157 +25,262 @@
 </head>
 
 <body>
-  <!-- Skip link for keyboard users. -->
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap">
-      <p class="eyebrow">Community initiative</p>
-      <h1>Saving Astronomy in Ukraine</h1>
-      <p class="tagline">Rebuilding Ukrainian astronomy and integrating it into the European Research Area.</p>
-
-      <!-- Thin anchor navigation. -->
-      <nav class="anchor-nav" aria-label="Sections">
-        <a href="#plan">The Plan</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <!-- ============ TOP NAVIGATION (sticky, full width) ============ -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="/">Saving Astronomy in Ukraine</a>
+      <details class="menu">
+        <summary aria-label="Open menu"><span class="bars"></span></summary>
+        <nav class="nav" aria-label="Primary">
+          <a href="#plan">The Plan</a>
+          <a href="#news">News</a>
+          <!-- Future: <a href="#institutions">Institutions</a> and
+               <a href="#partners">Partners</a>, once those sections go live. -->
+          <a href="#contact">Contact</a>
+        </nav>
+      </details>
     </div>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main">
 
-    <!-- ============ THE RECOVERY PLAN (first) ============ -->
-    <section id="plan" aria-labelledby="plan-title">
-      <h2 id="plan-title">The Recovery Plan for Ukrainian Astronomy</h2>
-
-      <p>The Recovery Plan for Ukrainian Astronomy is a first version and a shared vision, not a final document. Developed by the Ukrainian astronomical community over the past year, it sets out a long-term direction for rebuilding the field. Rather than restoring only what was lost, it treats recovery as a chance to build a more modern, internationally connected and resilient astronomy, structured around four directions: human capital and scientific networks, research infrastructure, innovation and economic development, and education and public engagement.</p>
-
-      <p>This is an open, evolving document, and we are in the middle of gathering feedback to make it better. Read the current version, then share your comments, criticism and ideas. Your input will help shape the next revision.</p>
-
-      <p class="actions">
-        <a class="button" href="assets/RecoveryPlanUkraine_EN.pdf">Read the plan (PDF)</a>
-        <a class="button button-secondary" href="https://forms.gle/As3SZyo9ueLFp4GY6">Share your feedback</a>
-      </p>
+    <!-- ============ HERO (full-bleed starfield background) ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Community initiative</p>
+        <h1>Saving Astronomy in Ukraine</h1>
+        <p class="lede">Rebuilding Ukrainian astronomy and integrating it into the European Research Area.</p>
+        <!-- The plan's own buttons (PDF + feedback) live in the Plan section
+             below; here we only guide visitors down the page. -->
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#plan">The Recovery Plan</a>
+          <a class="btn btn-ghost" href="#news">Latest news</a>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ NEWS (second) ============ -->
-    <section id="news" aria-labelledby="news-title">
-      <h2 id="news-title">News</h2>
-
-      <!-- Each news item here is a short teaser. The full article lives on
-           its own page under /news/<slug>/, so it has a permanent, citable
-           URL. To add a news item: copy news/_template/ to news/<slug>/,
-           fill it in, then add a teaser block here at the top. -->
-
-      <!-- News item 1: EAS 2026 (most recent, shown first) -->
-      <article class="news-item">
-        <p class="meta">2 July 2026, Lausanne, Switzerland</p>
-        <h3><a href="/news/eas2026/">European and Ukrainian astronomers chart a path for recovery at EAS 2026</a></h3>
-
-        <figure class="photo">
-          <a href="/news/eas2026/">
-            <img src="assets/eas2026.png"
-                 alt="Participants of the special session Saving astronomy in Ukraine standing in front of the SS43b title slide at EAS 2026 in Lausanne."
-                 width="1280" height="960">
-          </a>
-          <figcaption>The special session SS43 at EAS 2026, Lausanne, 2 July 2026.</figcaption>
-        </figure>
-
-        <p>At the European Astronomical Society Annual Meeting (EAS 2026) in Lausanne, the Ukrainian astronomical community and colleagues from across Europe met during the special session "Saving astronomy in Ukraine: what can we do as a community?" to discuss the future of Ukrainian astronomy and identify concrete steps towards its recovery and long-term integration into the European Research Area.</p>
-
-        <p class="readmore"><a href="/news/eas2026/">Read the full story &rarr;</a></p>
-      </article>
-
-      <!-- News item 2: DESY / DZA visit to Lviv, April 2026 -->
-      <article class="news-item">
-        <p class="meta">April 2026, Lviv, Ukraine</p>
-        <h3><a href="/news/lviv2026/">DESY, DZA, and Ukrainian partners advance the Recovery of Ukrainian Astronomy in Lviv</a></h3>
-
-        <figure class="photo">
-          <a href="/news/lviv2026/">
-            <img src="assets/lviv-2026-training-1.jpg"
-                 alt="Teachers in a classroom assembling self-made horn radio telescopes in blue and yellow, with laptops on the desks."
-                 width="1600" height="1066">
-          </a>
-          <figcaption>The teacher training involved self-made radio telescopes. Photo: Inna Potapova, National Centre "Junior Academy of Sciences of Ukraine".</figcaption>
-        </figure>
-
-        <p>Within the Recovery of Ukrainian Astronomy, DESY Director for Astroparticle Physics Christian Stegmann and Dr. Stefan Ohm (DZA) visited Lviv, signed an extension of the letter of intent with Ukrainian partners, now joined by the Junior Academy of Sciences of Ukraine, and held a radio astronomy training for teachers from across Ukraine.</p>
-
-        <p class="readmore"><a href="/news/lviv2026/">Read the full story &rarr;</a></p>
-      </article>
-
-      <!-- News item 3: DESY / DZA visit to Lviv, October 2025 -->
-      <article class="news-item">
-        <p class="meta">October 2025, Lviv, Ukraine</p>
-        <h3><a href="/news/lviv2025/">A first letter of intent for the Recovery of Ukrainian Astronomy signed in Lviv</a></h3>
-
-        <figure class="photo">
-          <a href="/news/lviv2025/">
-            <img src="assets/lviv-2025-signing.jpg"
-                 alt="Five representatives seated at a table with German, European Union and Ukrainian flags during the signing of the letter of intent in Lviv."
-                 width="1280" height="960">
-          </a>
-          <figcaption>The signing of the letter of intent in Lviv. Photo: Valeriia Pinchuk.</figcaption>
-        </figure>
-
-        <p>Within the Recovery of Ukrainian Astronomy, the Ukrainian Astronomical Association signed a letter of intent in Lviv with European partners DESY and the German Centre for Astrophysics (DZA) to support the recovery and strengthening of Ukrainian astronomy, alongside meetings with the city's universities and students.</p>
-
-        <p class="readmore"><a href="/news/lviv2025/">Read the full story &rarr;</a></p>
-      </article>
-
-      <!-- News item 4: Leiden meeting, June 2025 -->
-      <article class="news-item">
-        <p class="meta">10 to 11 June 2025, Leiden Observatory</p>
-        <h3><a href="/news/leiden2025/">Where it started: the Recovery Plan meeting in Leiden</a></h3>
-
-        <figure class="photo">
-          <a href="/news/leiden2025/">
-            <img src="assets/leiden-2025.jpg"
-                 alt="Participants of the Recovery Plan for Ukrainian Astronomy meeting on the steps of Leiden Observatory, June 2025."
-                 width="2560" height="2048">
-          </a>
-          <figcaption>The Recovery Plan meeting at Leiden Observatory, June 2025. Credit: naor.studio.</figcaption>
-        </figure>
-
-        <p>The recovery effort took shape at the meeting "Recovery Plan for Ukrainian Astronomy", hosted by Leiden Observatory and the IAU European Regional Office of Astronomy for Development (IAU-EROAD). Ukrainian astronomers opened a dialogue with European colleagues on rebuilding the field, summarised in a Nature Astronomy article.</p>
-
-        <p class="readmore"><a href="/news/leiden2025/">Read the full story &rarr;</a></p>
-      </article>
+    <!-- ============ FOUR DIRECTIONS (dark band) ============ -->
+    <section class="band band-dark">
+      <div class="container">
+        <h2 class="band-title rule">Four directions of the recovery</h2>
+        <div class="grid-4">
+          <article class="direction">
+            <h3>Human Capital and Scientific Networks</h3>
+            <p>Supporting researchers and students and reconnecting them with international networks.</p>
+          </article>
+          <article class="direction">
+            <h3>Research Infrastructure</h3>
+            <p>Restoring and modernising observatories, instruments and shared data facilities.</p>
+          </article>
+          <article class="direction">
+            <h3>Innovation and Economic Development</h3>
+            <p>Turning astronomical research into technology, skills and economic value.</p>
+          </article>
+          <article class="direction">
+            <h3>Education and Public Engagement</h3>
+            <p>Inspiring the next generation and sharing astronomy with the public.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <!-- Temporary contact while a shared initiative email is being set up.
-           Add or replace contact persons here. -->
-      <p class="contact-note">We are setting up a shared initiative email address. In the meantime, please use this temporary contact:</p>
-      <p class="contact-person">
-        <span class="contact-name">Pavlo Plotko</span><br>
-        International Scientific Affairs, German Centre for Astrophysics (DZA)<br>
-        <!-- The email is split into parts here and reassembled into a clickable
-             mailto link by the small script at the bottom of the page, so the
-             full address never appears in the raw HTML for spam bots to harvest.
-             The <noscript> fallback shows a readable form if JavaScript is off.
-             To change the address, edit data-user and data-domain (and the
-             fallback text) below. -->
-        <span class="email" data-user="pavlo.plotko" data-domain="dzastro.de"><noscript>pavlo.plotko [at] dzastro [dot] de</noscript></span>
-      </p>
+    <!-- ============ THE RECOVERY PLAN (two columns) ============ -->
+    <section id="plan" class="band band-light">
+      <div class="container split">
+        <div class="split-text">
+          <h2 class="rule">The Recovery Plan for Ukrainian Astronomy</h2>
+
+          <p>The Recovery Plan for Ukrainian Astronomy is a first version and a shared vision, not a final document. Developed by the Ukrainian astronomical community over the past year, it sets out a long-term direction for rebuilding the field. Rather than restoring only what was lost, it treats recovery as a chance to build a more modern, internationally connected and resilient astronomy, structured around four directions: human capital and scientific networks, research infrastructure, innovation and economic development, and education and public engagement.</p>
+
+          <p>This is an open, evolving document, and we are in the middle of gathering feedback to make it better. Read the current version, then share your comments, criticism and ideas. Your input will help shape the next revision.</p>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="assets/RecoveryPlanUkraine_EN.pdf">Read the plan (PDF)</a>
+            <a class="btn btn-outline" href="https://forms.gle/As3SZyo9ueLFp4GY6">Share your feedback</a>
+          </div>
+        </div>
+
+        <div class="split-media">
+          <!-- Designed plan-cover graphic (no image asset needed). -->
+          <div class="plan-cover">
+            <p class="pc-kicker">Recovery Plan</p>
+            <p class="pc-title">for Ukrainian Astronomy</p>
+            <ul class="pc-list">
+              <li>First version, a shared vision of the community</li>
+              <li>Developed by the Ukrainian astronomical community</li>
+              <li>Open for feedback and ideas from colleagues across Europe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWS (card grid) ============ -->
+    <section id="news" class="band band-tint">
+      <div class="container">
+        <h2 class="rule">News</h2>
+
+        <!-- Each card links to its own full article page under /news/<slug>/.
+             To add a news item: copy news/_template/ to news/<slug>/, fill it
+             in, then copy one card block below and update it. -->
+        <div class="cards">
+
+          <!-- EAS 2026 -->
+          <article class="card">
+            <a class="card-media" href="/news/eas2026/">
+              <img src="assets/eas2026.png"
+                   alt="Participants of the special session Saving astronomy in Ukraine standing in front of the SS43b title slide at EAS 2026 in Lausanne."
+                   width="1280" height="960">
+            </a>
+            <div class="card-body">
+              <p class="meta">2 July 2026, Lausanne, Switzerland</p>
+              <h3><a href="/news/eas2026/">European and Ukrainian astronomers chart a path for recovery at EAS 2026</a></h3>
+              <p class="excerpt">At the European Astronomical Society Annual Meeting (EAS 2026) in Lausanne, the Ukrainian astronomical community and colleagues from across Europe met during the special session "Saving astronomy in Ukraine: what can we do as a community?" to discuss the future of Ukrainian astronomy and identify concrete steps towards its recovery and long-term integration into the European Research Area.</p>
+              <p class="readmore"><a href="/news/eas2026/">Read the full story &rarr;</a></p>
+            </div>
+          </article>
+
+          <!-- Lviv, April 2026 -->
+          <article class="card">
+            <a class="card-media" href="/news/lviv2026/">
+              <img src="assets/lviv-2026-training-1.jpg"
+                   alt="Teachers in a classroom assembling self-made horn radio telescopes in blue and yellow, with laptops on the desks."
+                   width="1600" height="1066">
+            </a>
+            <div class="card-body">
+              <p class="meta">April 2026, Lviv, Ukraine</p>
+              <h3><a href="/news/lviv2026/">DESY, DZA, and Ukrainian partners advance the Recovery of Ukrainian Astronomy in Lviv</a></h3>
+              <p class="excerpt">Within the Recovery of Ukrainian Astronomy, DESY Director for Astroparticle Physics Christian Stegmann and Dr. Stefan Ohm (DZA) visited Lviv, signed an extension of the letter of intent with Ukrainian partners, now joined by the Junior Academy of Sciences of Ukraine, and held a radio astronomy training for teachers from across Ukraine.</p>
+              <p class="readmore"><a href="/news/lviv2026/">Read the full story &rarr;</a></p>
+            </div>
+          </article>
+
+          <!-- Lviv, October 2025 -->
+          <article class="card">
+            <a class="card-media" href="/news/lviv2025/">
+              <img src="assets/lviv-2025-signing.jpg"
+                   alt="Five representatives seated at a table with German, European Union and Ukrainian flags during the signing of the letter of intent in Lviv."
+                   width="1280" height="960">
+            </a>
+            <div class="card-body">
+              <p class="meta">October 2025, Lviv, Ukraine</p>
+              <h3><a href="/news/lviv2025/">A first letter of intent for the Recovery of Ukrainian Astronomy signed in Lviv</a></h3>
+              <p class="excerpt">Within the Recovery of Ukrainian Astronomy, the Ukrainian Astronomical Association signed a letter of intent in Lviv with European partners DESY and the German Centre for Astrophysics (DZA) to support the recovery and strengthening of Ukrainian astronomy, alongside meetings with the city's universities and students.</p>
+              <p class="readmore"><a href="/news/lviv2025/">Read the full story &rarr;</a></p>
+            </div>
+          </article>
+
+          <!-- Leiden, June 2025 -->
+          <article class="card">
+            <a class="card-media" href="/news/leiden2025/">
+              <img src="assets/leiden-2025.jpg"
+                   alt="Participants of the Recovery Plan for Ukrainian Astronomy meeting on the steps of Leiden Observatory, June 2025."
+                   width="2560" height="2048">
+            </a>
+            <div class="card-body">
+              <p class="meta">10 to 11 June 2025, Leiden Observatory</p>
+              <h3><a href="/news/leiden2025/">Where it started: the Recovery Plan meeting in Leiden</a></h3>
+              <p class="excerpt">The recovery effort took shape at the meeting "Recovery Plan for Ukrainian Astronomy", hosted by Leiden Observatory and the IAU European Regional Office of Astronomy for Development (IAU-EROAD). Ukrainian astronomers opened a dialogue with European colleagues on rebuilding the field, summarised in a Nature Astronomy article.</p>
+              <p class="readmore"><a href="/news/leiden2025/">Read the full story &rarr;</a></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FUTURE SECTIONS (not public yet) ============
+         Two prepared sections are commented out below: "Institutions in
+         Ukraine" (map + institution profiles) and "Partners and supporting
+         organisations". To publish one later: remove the comment markers
+         around it, fill in the real content, and add its link back to the
+         .nav in the top bar of every page.
+
+    <section id="institutions" class="band band-light">
+      <div class="container">
+        <h2 class="rule">Institutions in Ukraine</h2>
+        <p class="section-intro">Astronomy in Ukraine is carried by universities, observatories and research institutes across the country. A map and short profiles of the participating institutions will be added here.</p>
+
+        <div class="institutions">
+          <div class="map-panel" role="img" aria-label="Map of Ukraine; participating institutions to be added">
+            <p class="map-note">Interactive map in preparation</p>
+          </div>
+
+          <div class="inst-grid">
+            <article class="inst-card">
+              <h3>Institution name</h3>
+              <p class="inst-city">City</p>
+              <p>Short description of the institution and its role in the recovery, to be added.</p>
+            </article>
+            <article class="inst-card">
+              <h3>Institution name</h3>
+              <p class="inst-city">City</p>
+              <p>Short description of the institution and its role in the recovery, to be added.</p>
+            </article>
+            <article class="inst-card">
+              <h3>Institution name</h3>
+              <p class="inst-city">City</p>
+              <p>Short description of the institution and its role in the recovery, to be added.</p>
+            </article>
+            <article class="inst-card">
+              <h3>Institution name</h3>
+              <p class="inst-city">City</p>
+              <p>Short description of the institution and its role in the recovery, to be added.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="band band-dark">
+      <div class="container">
+        <h2 class="band-title rule">Partners and supporting organisations</h2>
+        <p class="section-intro on-dark">This initiative is carried out together with Ukrainian and European institutions and research networks. Logos and full details will be added here.</p>
+
+        <ul class="partner-list">
+          <li>Ukrainian Astronomical Association</li>
+          <li>DESY</li>
+          <li>German Centre for Astrophysics (DZA)</li>
+          <li>Junior Academy of Sciences of Ukraine</li>
+          <li>Leiden Observatory</li>
+          <li>IAU-EROAD</li>
+        </ul>
+      </div>
+    </section>
+
+    ============ END OF FUTURE SECTIONS ============ -->
+
+    <!-- ============ CONTACT (full-width band) ============ -->
+    <section id="contact" class="band band-tint">
+      <div class="container">
+        <h2 class="rule">Contact</h2>
+        <!-- Temporary contact while a shared initiative email is being set up. -->
+        <p class="contact-note">We are setting up a shared initiative email address. In the meantime, please use this temporary contact:</p>
+        <p class="contact-person">
+          <span class="contact-name">Pavlo Plotko</span><br>
+          International Scientific Affairs, German Centre for Astrophysics (DZA)<br>
+          <!-- Email split into parts and reassembled by the script at the bottom
+               of the page, so the full address is not exposed to spam bots.
+               The <noscript> fallback shows a readable form if JS is off. -->
+          <span class="email" data-user="pavlo.plotko" data-domain="dzastro.de"><noscript>pavlo.plotko [at] dzastro [dot] de</noscript></span>
+        </p>
+      </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
+  <!-- ============ FOOTER (full width) ============ -->
+  <footer class="site-footer band-dark">
+    <div class="container footer-inner">
       <p>Saving Astronomy in Ukraine, 2026.</p>
       <p class="credit">A community initiative supporting the recovery of Ukrainian astronomy.</p>
     </div>
   </footer>
 
   <!-- Reassemble email addresses on the client so they are not exposed as
-       plain text to address-harvesting bots. Progressive enhancement: if this
-       script does not run, the <noscript> fallback above is shown instead. -->
+       plain text to address-harvesting bots. -->
   <script>
     document.querySelectorAll(".email").forEach(function (el) {
       var addr = el.dataset.user + "@" + el.dataset.domain;

@@ -7,8 +7,9 @@ is trivial to edit.
 ## Files
 
 ```
-index.html            Homepage: the Plan, news teasers, contact
-styles.css            One shared stylesheet (colours, spacing, layout)
+index.html            Homepage: full-width sections (hero, four directions,
+                      plan, news, institutions, partners, contact)
+styles.css            One shared stylesheet (design system + layout)
 CNAME                 Custom domain for GitHub Pages (uastro.eu)
 news/
   eas2026/index.html      Full article: EAS 2026 special session SS43
@@ -19,11 +20,18 @@ news/
 assets/
   analytics.js          Google Analytics (gtag.js) loader; measurement ID here
   favicon.svg           Site icon
+  hero-space.jpg        Optimised hero background (2560px); mobile version too
+  hero-space-mobile.jpg Lighter hero background for small screens
   eas2026.png           EAS 2026 session photo (also the OG preview image)
   lviv-2026-*.jpg       Lviv 2026 photos (credit Inna Potapova, JASU)
   lviv-2025-*.jpg       Lviv 2025 photos (credit Valeriia Pinchuk, Mariia Seniak)
   leiden-2025.jpg       Leiden 2025 meeting photo (credit naor.studio)
   RecoveryPlanUkraine_EN.pdf   The Recovery Plan
+
+The hero background is derived from a large source image (`background.png`,
+git-ignored); the served copies are `hero-space.jpg` (2560px) and
+`hero-space-mobile.jpg`. To refresh them from a new source, resize to about
+2560px and 1280px wide and overwrite those two files.
 ```
 
 Each news article lives at its own permanent URL (`uastro.eu/news/<slug>/`),
@@ -36,8 +44,41 @@ Everything is hand-editable. Open the file, change the text, save.
 
 - **Change copy:** edit the text directly in `index.html` (or the article's
   `news/<slug>/index.html`). Each section is marked with a comment.
-- **Adjust colours / width:** edit the variables at the top of `styles.css`
-  (`--accent`, `--maxwidth`, and so on). All pages share this one stylesheet.
+- **Adjust colours / width / fonts:** edit the variables at the top of
+  `styles.css` (`--accent`, `--space`, `--paper`, `--container`, `--serif`,
+  and so on). All pages share this one stylesheet.
+
+### Layout: full-width sections ("bands")
+
+The homepage is built from full-width **bands**. Each band's background runs
+edge to edge, and its content sits in a centred `.container` (max ~1180px).
+Background variants alternate so sections read as distinct zones:
+`band-light` (off-white), `band-tint` (warm tint), `band-dark` (deep sky).
+
+**To add a new section** (for example a future "Institutions" map or an
+"Events" list), drop this skeleton anywhere inside `<main>` and give it an
+`id` so the nav can link to it:
+
+```html
+<section id="my-section" class="band band-tint">
+  <div class="container">
+    <h2 class="rule">Section title</h2>
+    <p class="section-intro">One or two lines introducing the section.</p>
+    <!-- content -->
+  </div>
+</section>
+```
+
+Inside the container you can reuse the layout helpers:
+`grid-4` (four columns), `cards` (responsive card grid), `split` (two columns,
+text and media). All of them collapse to one column on mobile automatically.
+Add the section to the nav by copying a link in the `.nav` of every page's
+top bar.
+
+The **Institutions in Ukraine** and **Partners and supporting organisations**
+sections are currently placeholders (marked "in preparation" on the page), ready
+to be filled in: real institution profiles and a map, and partner logos and
+names. Remove them, or fill them in, whenever you like.
 
 ### Add a news item
 
