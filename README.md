@@ -100,6 +100,20 @@ names. Remove them, or fill them in, whenever you like.
 The `_template` folder itself is not published: GitHub Pages skips folders
 that start with an underscore.
 
+### The institutions map
+
+`institutions/index.html` has an interactive map: an inline SVG outline of
+Ukraine (`.ua-map`) with clickable city markers synced to the city lists
+(`.city-block`). It needs no map library, tiles, or external requests. The
+country outline was projected from public-domain border data; the city marker
+coordinates are in the SVG's `0 0 1000 680` viewBox.
+
+To add a city: add a `<g class="ua-marker" data-city="SLUG">` (a `<circle>` plus
+a `<text>` label) inside the SVG at the right `cx`/`cy`, and a matching
+`<article class="city-block" id="cb-SLUG" data-city="SLUG">` in the list. The
+small script at the bottom of the file wires them together automatically. Each
+institution in a city list links by `#id` to its detail card lower on the page.
+
 ### Swap a photo
 
 The two news photos live in `assets/` (`eas2026.png` and `leiden-2025.jpg`).

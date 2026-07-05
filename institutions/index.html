@@ -52,6 +52,73 @@
       </div>
     </section>
 
+    <!-- ============ INTERACTIVE MAP ============ -->
+    <section class="band band-dark" id="map">
+      <div class="container">
+        <h2 class="band-title rule">Where the institutions are</h2>
+        <p class="section-intro on-dark">Ukraine's astronomical institutions are concentrated in four cities. Select a marker or a city to see the observatories, institutes and departments based there.</p>
+
+        <div class="map-layout">
+          <div class="map-figure">
+            <svg viewBox="0 0 1000 680" class="ua-map" role="img" aria-label="Map of Ukraine with markers for Kyiv, Kharkiv, Lviv and Odesa">
+              <path class="ua-outline" d="M537.5 38.7L557.4 42.0L570.9 23.7L587.1 27.8L642.4 20.0L676.5 65.4L663.2 81.7L667.6 106.6L710.1 110.5L729.1 145.3L727.9 161.1L795.7 189.3L836.6 176.6L869.6 214.2L900.7 213.3L979.4 239.5L980.0 263.0L958.3 305.1L970.1 349.3L961.7 376.1L910.1 382.0L882.6 404.4L880.9 440.0L838.3 446.5L802.8 472.4L752.9 476.7L706.9 506.6L710.1 556.5L736.2 575.9L790.6 571.1L780.2 599.7L721.8 613.6L649.3 660.0L619.7 643.7L631.4 606.0L573.1 582.5L582.6 567.1L633.6 540.4L618.2 522.0L535.3 501.8L531.6 471.8L482.2 481.7L462.4 525.9L421.1 585.2L396.9 571.5L371.8 584.4L348.0 569.6L361.4 560.9L370.7 533.3L385.3 507.7L381.6 493.4L392.7 487.0L398.0 498.1L429.4 500.4L443.5 494.5L433.6 486.3L437.4 474.4L418.7 454.0L411.0 420.4L391.6 407.3L395.4 380.1L371.3 358.5L349.4 355.5L310.0 330.5L274.6 338.4L261.9 350.3L239.4 350.2L225.9 369.0L186.6 376.7L168.3 389.0L143.6 369.4L109.4 369.1L76.4 360.2L53.3 377.4L49.6 355.9L20.0 334.1L30.4 301.7L45.2 280.8L56.9 285.5L43.1 249.4L91.5 182.7L118.0 173.3L123.7 150.8L96.9 80.7L122.4 77.6L151.6 55.8L193.0 54.1L246.9 60.4L306.4 79.6L348.4 81.2L368.5 92.8L388.5 78.8L402.5 97.6L450.6 93.8L471.8 101.5L475.3 61.1L491.7 43.5L537.5 38.7Z"/>
+              <g class="ua-marker" data-city="lviv" tabindex="0" role="button" aria-label="Lviv, 4 institutions">
+                <circle class="dot" cx="123.7" cy="220.3" r="12"/>
+                <text class="lbl" x="123.7" y="200">Lviv</text>
+              </g>
+              <g class="ua-marker" data-city="kyiv" tabindex="0" role="button" aria-label="Kyiv, 3 institutions">
+                <circle class="dot" cx="470.1" cy="171.3" r="11"/>
+                <text class="lbl" x="470.1" y="151">Kyiv</text>
+              </g>
+              <g class="ua-marker" data-city="kharkiv" tabindex="0" role="button" aria-label="Kharkiv, 3 institutions">
+                <circle class="dot" cx="774.6" cy="208.0" r="11"/>
+                <text class="lbl" x="774.6" y="188">Kharkiv</text>
+              </g>
+              <g class="ua-marker" data-city="odesa" tabindex="0" role="button" aria-label="Odesa, 2 institutions">
+                <circle class="dot" cx="480.8" cy="489.8" r="10"/>
+                <text class="lbl" x="480.8" y="469">Odesa</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="map-cities">
+            <article class="city-block" id="cb-kyiv" data-city="kyiv">
+              <h3>Kyiv <span class="city-count">3 institutions</span></h3>
+              <ul>
+                <li><a href="#mao">Main Astronomical Observatory, NAS of Ukraine</a></li>
+                <li><a href="#knu-obs">Astronomical Observatory, Taras Shevchenko National University of Kyiv</a></li>
+                <li><a href="#knu-dept">Department of Astronomy and Space Physics, Taras Shevchenko National University of Kyiv</a></li>
+              </ul>
+            </article>
+            <article class="city-block" id="cb-kharkiv" data-city="kharkiv">
+              <h3>Kharkiv <span class="city-count">3 institutions</span></h3>
+              <ul>
+                <li><a href="#ira">Institute of Radio Astronomy, NAS of Ukraine</a></li>
+                <li><a href="#karazin-ri">Research Institute of Astronomy, V. N. Karazin Kharkiv National University</a></li>
+                <li><a href="#karazin-dept">Department of Astronomy and Space Informatics, V. N. Karazin Kharkiv National University</a></li>
+              </ul>
+            </article>
+            <article class="city-block" id="cb-lviv" data-city="lviv">
+              <h3>Lviv <span class="city-count">4 institutions</span></h3>
+              <ul>
+                <li><a href="#franko-obs">Astronomical Observatory, Ivan Franko National University of Lviv</a></li>
+                <li><a href="#franko-dept">Astrophysics Department, Ivan Franko National University of Lviv</a></li>
+                <li><a href="#polytechnic-obs">Astronomical Observatory, Lviv Polytechnic National University</a></li>
+                <li><a href="#polytechnic-dept">Department of Higher Geodesy and Astronomy, Lviv Polytechnic National University</a></li>
+              </ul>
+            </article>
+            <article class="city-block" id="cb-odesa" data-city="odesa">
+              <h3>Odesa <span class="city-count">2 institutions</span></h3>
+              <ul>
+                <li><a href="#odesa-obs">Astronomical Observatory, Odesa I. I. Mechnikov National University</a></li>
+                <li><a href="#odesa-dept">Department of Physics and Astronomy, Odesa I. I. Mechnikov National University</a></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ NAS OF UKRAINE ============ -->
     <section class="band band-tint">
       <div class="container">
@@ -59,7 +126,7 @@
 
         <div class="cards">
 
-          <article class="card">
+          <article class="card" id="mao">
             <div class="card-body">
               <p class="inst-city">Kyiv</p>
               <h3>Main Astronomical Observatory of the NAS of Ukraine (MAO)</h3>
@@ -68,7 +135,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="ira">
             <div class="card-body">
               <p class="inst-city">Kharkiv</p>
               <h3>Institute of Radio Astronomy of the NAS of Ukraine (IRA)</h3>
@@ -89,7 +156,7 @@
 
         <div class="cards">
 
-          <article class="card">
+          <article class="card" id="knu-obs">
             <div class="card-body">
               <p class="inst-city">Kyiv</p>
               <h3>Astronomical Observatory of Taras Shevchenko National University of Kyiv</h3>
@@ -98,7 +165,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="karazin-ri">
             <div class="card-body">
               <p class="inst-city">Kharkiv</p>
               <h3>Research Institute of Astronomy, V. N. Karazin Kharkiv National University</h3>
@@ -107,7 +174,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="franko-obs">
             <div class="card-body">
               <p class="inst-city">Lviv</p>
               <h3>Astronomical Observatory of Ivan Franko National University of Lviv</h3>
@@ -116,7 +183,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="polytechnic-obs">
             <div class="card-body">
               <p class="inst-city">Lviv</p>
               <h3>Astronomical Observatory of Lviv Polytechnic National University</h3>
@@ -125,7 +192,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="odesa-obs">
             <div class="card-body">
               <p class="inst-city">Odesa</p>
               <h3>Astronomical Observatory, Odesa I. I. Mechnikov National University</h3>
@@ -146,7 +213,7 @@
 
         <div class="cards">
 
-          <article class="card">
+          <article class="card" id="knu-dept">
             <div class="card-body">
               <p class="inst-city">Kyiv</p>
               <h3>Department of Astronomy and Space Physics, Taras Shevchenko National University of Kyiv</h3>
@@ -155,7 +222,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="karazin-dept">
             <div class="card-body">
               <p class="inst-city">Kharkiv</p>
               <h3>Department of Astronomy and Space Informatics, V. N. Karazin Kharkiv National University</h3>
@@ -164,7 +231,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="franko-dept">
             <div class="card-body">
               <p class="inst-city">Lviv</p>
               <h3>Astrophysics Department, Ivan Franko National University of Lviv</h3>
@@ -173,7 +240,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="polytechnic-dept">
             <div class="card-body">
               <p class="inst-city">Lviv</p>
               <h3>Department of Higher Geodesy and Astronomy, Lviv Polytechnic National University</h3>
@@ -182,7 +249,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" id="odesa-dept">
             <div class="card-body">
               <p class="inst-city">Odesa</p>
               <h3>Department of Physics and Astronomy, Odesa I. I. Mechnikov National University</h3>
@@ -206,5 +273,40 @@
       <p class="credit">A community initiative supporting the recovery of Ukrainian astronomy.</p>
     </div>
   </footer>
+
+  <!-- Interactive map: sync the city markers with the city list. Progressive
+       enhancement, if this does not run, all city lists are still shown. -->
+  <script>
+    (function () {
+      var markers = document.querySelectorAll(".ua-marker");
+      if (!markers.length) return;
+      function setActive(city) {
+        document.querySelectorAll(".ua-marker").forEach(function (m) {
+          m.classList.toggle("active", m.getAttribute("data-city") === city);
+        });
+        document.querySelectorAll(".city-block").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-city") === city);
+        });
+      }
+      markers.forEach(function (m) {
+        var city = m.getAttribute("data-city");
+        function activate() {
+          setActive(city);
+          var block = document.getElementById("cb-" + city);
+          if (block) block.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        }
+        m.addEventListener("click", activate);
+        m.addEventListener("mouseenter", function () { setActive(city); });
+        m.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); activate(); }
+        });
+      });
+      document.querySelectorAll(".city-block h3").forEach(function (h) {
+        h.addEventListener("click", function () {
+          setActive(h.parentNode.getAttribute("data-city"));
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
