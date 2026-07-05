@@ -447,6 +447,15 @@ summary:focus-visible,
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin-bottom: 26px;
 }
+/* Small family label above each group in the homepage preview. */
+.inst-group-label {
+  margin: 28px 0 12px;
+  font-size: 0.82rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent-strong);
+}
 .inst-card {
   background: #fff;
   border: 1px solid var(--line);
