@@ -11,6 +11,10 @@ index.html            Homepage: full-width sections (hero, four directions,
                       plan, news, institutions, partners, contact)
 styles.css            One shared stylesheet (design system + layout)
 CNAME                 Custom domain for GitHub Pages (uastro.eu)
+plan/
+  index.html          The Recovery Plan as a readable web page (full text,
+                      table of contents, figures), generated from the
+                      git-ignored Markdown source in assets/
 institutions/
   index.html          Overview of the main astronomical institutions of
                       Ukraine, with profiles and links to the Leiden slides
@@ -121,6 +125,15 @@ To replace one, either overwrite the file with the same name, or add a new file
 and update the `<img src="...">` and `<figcaption>` inside the matching
 `<figure class="photo">` block in `index.html`. Keep the `width`/`height`
 attributes roughly matching the new image's pixel size to avoid layout shift.
+
+### Update the Recovery Plan web page
+
+`plan/index.html` is generated from the Markdown export of the plan
+(`assets/RecoveryPlanUkraine_EN.md`, kept out of git). For small wording fixes,
+edit `plan/index.html` directly. For a new revision of the plan, replace the
+Markdown file and regenerate: the document's figures live in `assets/plan/`
+(`fig-01.png` ...), the table of contents is built from the `#`/`##` headings,
+and `**Direction N. ...**` lines are promoted to section headings.
 
 ### Replace the Recovery Plan PDF
 

@@ -216,6 +216,11 @@ summary:focus-visible,
   border-color: var(--accent-strong);
   color: #fff;
 }
+/* Keep button text readable inside dark bands, where plain links turn gold. */
+.band-dark .btn-primary { color: var(--accent-ink); }
+.band-dark .btn-primary:hover { color: #fff; }
+.band-dark .btn-ghost { color: #fff; }
+.band-dark .btn-ghost:hover { color: var(--gold); }
 .btn-ghost {              /* on dark backgrounds (hero) */
   background: transparent;
   color: #fff;
@@ -547,6 +552,97 @@ summary:focus-visible,
 
 /* Anchor jumps to a detail card should clear the sticky topbar. */
 .card { scroll-margin-top: 84px; }
+
+/* ============================================================
+   Plan document (/plan/) — long-form reading page
+   ============================================================ */
+.plan-doc {
+  max-width: 760px;
+  margin-inline: auto;
+}
+.plan-doc p, .plan-doc li { font-size: 1.02rem; }
+.plan-doc .doc-h1 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  margin: 56px 0 18px;
+  padding-top: 26px;
+  border-top: 2px solid var(--gold);
+}
+.plan-doc .doc-h2 {
+  font-size: 1.28rem;
+  line-height: 1.3;
+  margin: 40px 0 14px;
+}
+.plan-doc .doc-h3 {
+  font-size: 1.08rem;
+  line-height: 1.35;
+  margin: 30px 0 10px;
+}
+.plan-doc .doc-h4 {
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  margin: 24px 0 8px;
+}
+/* Anchor jumps clear the sticky topbar. */
+.plan-doc h2, .plan-doc h3, .plan-doc h4 { scroll-margin-top: 84px; }
+
+/* Figures extracted from the document. */
+.doc-fig { margin: 26px 0; }
+.doc-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.doc-fig figcaption {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* Table of contents box. */
+.toc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 34px 0 10px;
+}
+.toc-title {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ul { margin: 0; padding: 0; list-style: none; }
+.toc li { margin: 4px 0; }
+.toc li.toc-part { margin-top: 12px; font-weight: 700; }
+.toc li.toc-part:first-child { margin-top: 0; }
+.toc li.toc-sec { padding-left: 18px; font-size: 0.95rem; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* The one embedded table (SWOT): scroll on small screens. */
+.table-scroll { overflow-x: auto; margin: 26px 0; }
+.table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+  background: #fff;
+}
+.table-scroll th, .table-scroll td {
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  vertical-align: top;
+  text-align: left;
+}
+.table-scroll th { background: var(--tint, #f3efe6); }
+.table-scroll ul { margin: 0; padding-left: 18px; }
+.table-scroll p { margin: 0; }
 
 /* Small "placeholder / in preparation" note */
 .ph-note {

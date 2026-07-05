@@ -12,5 +12,9 @@ assets/background.png
 # assets/slides-leiden-2025/
 assets/presentaions_Leiden/
 
+# Markdown source of the Recovery Plan; the published versions are the
+# /plan/ page (generated from it) and the PDF
+assets/RecoveryPlanUkraine_EN.md
+
 # Local editor / preview config
 .claude/
