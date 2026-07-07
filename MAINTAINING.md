@@ -19,6 +19,9 @@ institutions/
   index.html          Overview of the main astronomical institutions of
                       Ukraine, with profiles, an interactive map, and links
                       to the Leiden slides
+projects/
+  space-radio/index.html  Project page: Space Radio for Ukraine (about,
+                          photos, instructions, software downloads)
 news/
   eas2026/index.html      Full article: EAS 2026 special session SS43
   lviv2026/index.html     Full article: Lviv visit, April 2026
@@ -37,6 +40,8 @@ assets/
   RecoveryPlanUkraine_EN.pdf   The Recovery Plan (PDF)
   plan/                 Figures used by the /plan/ web page (fig-01.png ...)
   slides-leiden-2025/   Presentation slides from the Leiden meeting (PDFs)
+  projects/space-radio/ Space Radio for Ukraine files: logo, workshop photos,
+                        instruction PDFs (EN/UA), software downloads
 ```
 
 Each news article lives at its own permanent URL (`uastro.eu/news/<slug>/`), so
@@ -95,6 +100,19 @@ into the `.nav` of every page's top bar.
 
 The `_template` folder itself is not published (GitHub Pages skips folders that
 start with an underscore).
+
+### Add a project
+
+Projects are joint initiatives under the umbrella of the Recovery of Ukrainian
+Astronomy. Each has its own page and a card in the homepage Projects band.
+
+1. Create `projects/<slug>/index.html` — copy `projects/space-radio/index.html`
+   as the pattern: a dark title band (name, one-line summary, key actions), an
+   About section (`split` with the project logo), a photo `gallery`, and a
+   `cards` row for documents / downloads / partners.
+2. Put the project's files in `assets/projects/<slug>/` (resize photos to about
+   1600px wide).
+3. Add a card for it in the `PROJECTS` section of the homepage `index.html`.
 
 ### Update the Recovery Plan
 

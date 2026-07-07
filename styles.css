@@ -644,6 +644,55 @@ summary:focus-visible,
 .table-scroll ul { margin: 0; padding-left: 18px; }
 .table-scroll p { margin: 0; }
 
+/* ============================================================
+   Projects (homepage band + project pages)
+   ============================================================ */
+.project-title { font-size: 1.5rem; margin: 8px 0 12px; }
+.project-title a { color: #fff; text-decoration: none; }
+.project-title a:hover { color: var(--gold); text-decoration: underline; }
+.on-dark-body { color: var(--on-dark-muted); }
+
+/* Logo panel: white rounded card so the logo reads on any band. */
+.project-logo {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-logo img {
+  width: min(100%, 300px);
+  height: auto;
+}
+
+/* Photo gallery on project pages. */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 30px;
+}
+.gallery figure { margin: 0; }
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(12, 17, 34, 0.12);
+}
+.gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.gallery .gallery-wide { grid-column: 1 / -1; }
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr; }
+}
+
 /* Small "placeholder / in preparation" note */
 .ph-note {
   margin: 24px 0 0;

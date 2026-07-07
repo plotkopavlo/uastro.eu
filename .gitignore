@@ -16,5 +16,9 @@ assets/presentaions_Leiden/
 # /plan/ page (generated from it) and the PDF
 assets/RecoveryPlanUkraine_EN.md
 
+# Raw source material for the Space Radio for Ukraine project; the
+# published copies live in assets/projects/space-radio/
+assets/SpaceRadioUkraine/
+
 # Local editor / preview config
 .claude/
