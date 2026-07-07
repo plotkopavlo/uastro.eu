@@ -19,6 +19,12 @@ institutions/
   index.html          Overview of the main astronomical institutions of
                       Ukraine, with profiles, an interactive map, and links
                       to the Leiden slides
+facilities/
+  index.html          Facilities and infrastructure: key telescopes and
+                      instruments, grouped by domain (under construction)
+war-impact/
+  index.html          The impact of the war: people, infrastructure, funding,
+                      energy, education, resilience (under construction)
 projects/
   space-radio/index.html  Project page: Space Radio for Ukraine (about,
                           photos, instructions, software downloads)
