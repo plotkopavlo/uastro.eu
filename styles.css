@@ -393,6 +393,10 @@ summary:focus-visible,
 .card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 .card-body .meta { margin: 0 0 6px; }
+/* Small image-source credit at the foot of a card. */
+.photo-credit { margin: 12px 0 0; font-size: 0.78rem; color: var(--muted); }
+.photo-credit a { color: var(--muted); }
+.photo-credit a:hover { color: var(--accent-strong); }
 .card-body h3 { margin: 0 0 10px; font-size: 1.2rem; line-height: 1.28; }
 .card-body h3 a { color: var(--ink); text-decoration: none; }
 .card-body h3 a:hover { color: var(--accent-strong); }

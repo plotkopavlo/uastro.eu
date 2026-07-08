@@ -20,5 +20,9 @@ assets/RecoveryPlanUkraine_EN.md
 # published copies live in assets/projects/space-radio/
 assets/SpaceRadioUkraine/
 
+# Raw institution photos and source list; the published, resized copies
+# live in assets/institutions/ (credited on the institutions page)
+assets/instutations/
+
 # Local editor / preview config
 .claude/

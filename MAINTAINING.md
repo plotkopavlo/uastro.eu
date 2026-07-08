@@ -48,6 +48,8 @@ assets/
   slides-leiden-2025/   Presentation slides from the Leiden meeting (PDFs)
   projects/space-radio/ Space Radio for Ukraine files: logo, workshop photos,
                         instruction PDFs (EN/UA), software downloads
+  institutions/         Photos for the institution cards, one per card id
+                        (mao.jpg, ira.jpg, knu-obs.jpg ...); credited on the page
 ```
 
 Each news article lives at its own permanent URL (`uastro.eu/news/<slug>/`), so
