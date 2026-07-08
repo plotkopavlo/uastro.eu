@@ -456,6 +456,14 @@ summary:focus-visible,
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin-bottom: 26px;
 }
+/* Whole homepage institution card is a link to its profile. */
+.inst-link { display: block; color: inherit; text-decoration: none; }
+.inst-card:has(.inst-link) { padding: 0; overflow: hidden; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.inst-card .inst-link { padding: 14px 16px 16px; }
+.inst-card .inst-thumb { border-radius: 0; margin-bottom: 12px; }
+.inst-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(12, 17, 34, 0.12); }
+.inst-card:hover h3 { color: var(--accent-strong); }
+
 /* Thumbnail at the top of each homepage institution card. */
 .inst-thumb {
   display: block;
