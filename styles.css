@@ -456,6 +456,16 @@ summary:focus-visible,
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   margin-bottom: 26px;
 }
+/* Thumbnail at the top of each homepage institution card. */
+.inst-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
 /* Small family label above each group in the homepage preview. */
 .inst-group-label {
   margin: 28px 0 12px;
