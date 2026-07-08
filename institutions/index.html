@@ -34,7 +34,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="/#plan">The Plan</a>
         <a href="/#news">News</a>
-        <a href="/institutions/">Institutions</a>
+        <a href="/institutions/" aria-current="page">Institutions</a>
         <a href="/facilities/">Facilities</a>
         <a href="/war-impact/">War impact</a>
         <a href="/#projects">Projects</a>
@@ -329,8 +329,13 @@
         });
       });
       document.querySelectorAll(".city-block h3").forEach(function (h) {
-        h.addEventListener("click", function () {
-          setActive(h.parentNode.getAttribute("data-city"));
+        // Keyboard access: headings act as toggles for the map highlight.
+        h.setAttribute("tabindex", "0");
+        h.setAttribute("role", "button");
+        function act() { setActive(h.parentNode.getAttribute("data-city")); }
+        h.addEventListener("click", act);
+        h.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); }
         });
       });
     })();
