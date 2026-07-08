@@ -24,5 +24,8 @@ assets/SpaceRadioUkraine/
 # live in assets/institutions/ (credited on the institutions page)
 assets/instutations/
 
+# Raw supporter logos; the published copies live in assets/supporters/
+assets/_supporters-src/
+
 # Local editor / preview config
 .claude/
