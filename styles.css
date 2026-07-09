@@ -484,8 +484,9 @@ summary:focus-visible,
 }
 /* Full-width variant used for the homepage institutions preview. */
 .inst-grid.wide {
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  margin-bottom: 26px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
 }
 /* "Initiative supported by" logo cards. */
 .supporter-grid {
@@ -519,8 +520,10 @@ summary:focus-visible,
 /* Whole homepage institution card is a link to its profile. */
 .inst-link { display: block; color: inherit; text-decoration: none; }
 .inst-card:has(.inst-link) { padding: 0; overflow: hidden; transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.inst-card .inst-link { padding: 14px 16px 16px; }
-.inst-card .inst-thumb { border-radius: 0; margin-bottom: 12px; }
+.inst-card .inst-link { padding: 10px 12px 12px; }
+.inst-card .inst-thumb { border-radius: 0; margin-bottom: 8px; }
+.inst-card h3 { font-size: 0.88rem; line-height: 1.22; }
+.inst-card .inst-city { font-size: 0.7rem; margin-bottom: 4px; }
 .inst-card:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(12, 17, 34, 0.12); }
 .inst-card:hover h3 { color: var(--accent-strong); }
 
@@ -536,7 +539,7 @@ summary:focus-visible,
 
 /* Small family label above each group in the homepage preview. */
 .inst-group-label {
-  margin: 28px 0 12px;
+  margin: 20px 0 9px;
   font-size: 0.82rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -920,7 +923,7 @@ figcaption { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
 @media (max-width: 620px) {
   body { font-size: 17px; }
   .grid-4 { grid-template-columns: 1fr; }
-  .inst-grid { grid-template-columns: 1fr; }
+  .inst-grid:not(.wide) { grid-template-columns: 1fr; }
   /* Lighter hero image on small screens */
   .hero {
     background-image:
