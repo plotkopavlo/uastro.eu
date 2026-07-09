@@ -25,9 +25,11 @@ facilities/
 war-impact/
   index.html          The impact of the war: people, infrastructure, funding,
                       energy, education, resilience (under construction)
-projects/
-  space-radio/index.html  Project page: Space Radio for Ukraine (about,
-                          photos, instructions, software downloads)
+projects/               Projects & communities that are part of the recovery
+  space-radio/index.html  Space Radio for Ukraine (about, photos, downloads)
+  astrosandbox/index.html AstroSandbox educational community
+spotlight/              Broader Ukrainian astronomy & space (not the recovery)
+  space-apps-kyiv/index.html  Space Apps Kyiv (NASA hackathon host)
 news/
   eas2026/index.html      Full article: EAS 2026 special session SS43
   lviv2026/index.html     Full article: Lviv visit, April 2026

@@ -411,6 +411,7 @@ summary:focus-visible,
   display: flex;
   flex-direction: column;
   background: #fff;
+  color: var(--ink);
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
