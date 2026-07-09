@@ -31,14 +31,14 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="/">Saving Astronomy in Ukraine</a>
-      <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="nav-toggle-bars"></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
         <a href="#plan">The Plan</a>
         <a href="#news">News</a>
         <a href="/institutions/">Institutions</a>
         <a href="/facilities/">Facilities</a>
         <a href="/war-impact/">War impact</a>
         <a href="#projects">Projects</a>
-        <a href="#supporters">Supported by</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -469,5 +469,6 @@
       el.replaceChildren(link);
     });
   </script>
+  <script src="/assets/nav.js"></script>
 </body>
 </html>
