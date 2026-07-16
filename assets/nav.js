@@ -22,3 +22,18 @@
     a.addEventListener("click", function () { set(false); });
   });
 })();
+
+/* Shuffle the supporter logos on every load, so the order implies no ranking
+   or preference between the supporting institutions. */
+(function () {
+  var grid = document.querySelector(".supporter-grid");
+  if (!grid) return;
+  var items = Array.prototype.slice.call(grid.children);
+  for (var i = items.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = items[i];
+    items[i] = items[j];
+    items[j] = tmp;
+  }
+  items.forEach(function (el) { grid.appendChild(el); });
+})();
