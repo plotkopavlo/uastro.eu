@@ -426,7 +426,7 @@ summary:focus-visible,
 .card-body { padding: 20px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 .card-body .meta { margin: 0 0 6px; }
 /* Small project/community logo at the top of a card. */
-.card-logo { display: block; height: 56px; width: auto; margin: 0 0 12px; }
+.card-logo { display: block; height: 96px; width: auto; margin: 0 0 16px; }
 /* Project logo above the title on a dedicated page. */
 .title-logo { display: block; height: 84px; width: auto; margin: 0 0 16px; }
 /* Small image-source credit at the foot of a card. */
