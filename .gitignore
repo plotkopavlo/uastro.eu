@@ -29,3 +29,7 @@ assets/_supporters-src/
 
 # Local editor / preview config
 .claude/
+
+# New plan sources (v2); served forms are /plan/ and RecoveryPlanUkraine_EN.pdf
+assets/recovery-plan_v2.md
+assets/RecoveryPlanUkraine_EN-v2.pdf
