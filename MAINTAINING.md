@@ -46,6 +46,7 @@ assets/
   lviv-2025-*.jpg       Lviv 2025 photos (credit Valeriia Pinchuk, Mariia Seniak)
   leiden-2025.jpg       Leiden 2025 meeting photo (credit naor.studio)
   RecoveryPlanUkraine_EN.pdf   The Recovery Plan (PDF)
+  saving-astronomy-in-ukraine-booklet.pdf   Printable booklet (A4 duplex, flip on short edge, folds to A5)
   plan/                 Figures used by the /plan/ web page (fig-01.png ...)
   slides-leiden-2025/   Presentation slides from the Leiden meeting (PDFs)
   projects/space-radio/ Space Radio for Ukraine files: logo, workshop photos,
