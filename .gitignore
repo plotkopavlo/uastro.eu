@@ -39,3 +39,7 @@ assets/ysc/
 # Raw Ukrainian Science Diaspora logo pack; the published copy is
 # assets/supporters/ukrainian-science-diaspora.svg
 assets/UKRAINIAN SCIENCE DIASPORA_logos/
+
+# Print booklet; carries the contact email in plain text, so keep it off the
+# public site (the website obfuscates the address)
+print/
